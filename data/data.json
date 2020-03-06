@@ -1,0 +1,46 @@
+    {
+        "2015": [
+            {
+                "product": "Aliexpress",
+                "total": 1,
+                "atual": 1
+            },
+            {
+                "product": "Amazon",
+                "total": 2,
+                "atual": 3
+            },
+            {
+                "product": "Apple",
+                "total": 3,
+                "atual": 6
+            },
+            {
+                "product": "Samsung",
+                "total": 4,
+                "atual": 10
+            }
+        ],
+        "2014": [
+            {
+                "product": "Aliexpress",
+                "total": 10,
+                "atual": 10
+            },
+            {
+                "product": "Amazon",
+                "total": 20,
+                "atual": 30
+            },
+            {
+                "product": "Apple",
+                "total": 30,
+                "atual": 60
+            },
+            {
+                "product": "Samsung",
+                "total": 40,
+                "atual": 100
+            }
+        ]
+    }
