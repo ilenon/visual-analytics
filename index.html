@@ -26,8 +26,13 @@
             </div> <!-- /.sidebar-header -->
 
             <ul class="sidebar-menu list-unstyled p-3">
-                <li class="active"><a href="#">Dashboard</a></li>
-                <li><a href="#">Lorem Ipsum</a></li>
+                <li><a href="#">Home</a></li>
+                <li class="active"><a href="#">Analytics</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Messages</a></li>
+                <li><a href="#">Downloads</a></li>
+                <li><a href="#">Favorites</a></li>
+                <li><a href="#">Permissions</a></li>
             </ul> <!-- ./sidebar-menu -->
         </div>
         <!-- /.SIDEBAR -->
@@ -43,14 +48,59 @@
             <div class="inner-content p-4">
                 <div class="row">
                     <div class="col-12">
-                        <div class="card rounded-0 border-0 p-3">
+                        <div class="card rounded-0 border p-4">
 
-                            <h5 class="lead font-weight-bold">Visual Analytics</h5>
-                            <p>Prototype of a portal</p>
-                            <hr>
+                            <h3 class="font-weight-bold t-dblue">Prototype of an Analytics page.</h3>
+                            <p>Estimated Annual Sales for U.S. Electronic Shopping and Mail-Order Houses (NAICS 45411)</p>
+                            <hr><!-- --------------------------------------------------------------------------------- -->
 
-                            <div class="table teble-responsive">
-                                
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <p class="lead mb-0">Total and E-commerce1 Sales by Merchandise Line: 1999-2015</p>
+
+                                <div class="form-group mb-0">
+                                    <select name="year" id="year" class="custon-select custon-select-sm form-control shadow-sm">
+                                        <option value="">Choose year</option>
+                                        <option value="">2015</option>
+                                        <option value="">2014</option>
+                                        <option value="">2013</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-12 col-lg-4">
+                                    <div class="d-flex align-items-center bg-light shadow-sm w-100 p-3">
+                                        <i class="fas fa-4x fa-store-alt pr-3 t-gray"></i>
+                                        <div>
+                                            <h3 class="lead t-blue font-weight-bold text-left mb-2">Total sales</h3>
+                                            <p class="lead font-weight-bold mb-0 text-secondary text-left">433.692</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div class="d-flex align-items-center bg-light shadow-sm w-100 p-3">
+                                        <i class="fas fa-4x fa-shopping-cart pr-3 t-gray"></i>
+                                        <div>
+                                            <h3 class="lead t-blue font-weight-bold text-left mb-2">E-commerce sales</h3>
+                                            <p class="lead font-weight-bold mb-0 text-secondary text-left">294.809</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div class="d-flex align-items-center bg-light shadow-sm w-100 p-3">
+                                        <i class="fas fa-4x fa-chart-line pr-3 t-gray"></i>
+                                        <div>
+                                            <h3 class="lead t-blue font-weight-bold text-left mb-2">Best Seller</h3>
+                                            <p class="mb-0 font-weight-bold text-secondary text-left">Clothing and clothing accessories</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="main" class="main border position-relative">
+
+                                <!--svg id="graph" width="100%" height="500px"></svg-->
+
                             </div>
 
                         </div>

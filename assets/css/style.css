@@ -6,7 +6,11 @@ textarea:focus, input:focus, select:focus, .btn:focus { box-shadow: 0 0 0 0; bor
 .form-control:focus { box-shadow: 0 0 0 0; outline: 0; border: 2px solid rgba(54, 162, 235, .3); }
 .wrapper { display: flex; width: 100%; align-items: stretch; }
 
-
+.t-blue { color: #2196f3 !important; }
+.t-dblue { color: #0969b4 !important; }
+.t-gray { color: #ccc !important; }
+.bg-blue { background-color: #2196f3 !important; }
+.bg-dblue { background-color: #0969b4 !important; }
 
 /** SIDEBAR STYLES */
 #sidebar { min-width: 250px; max-width: 250px; top: 0; left: 0; bottom: 0; position: fixed; overflow: auto;
@@ -25,10 +29,29 @@ a[data-toggle="collapse"] { position: relative; }
 #content { width: 100%; margin-left: 250px; transition: all 0.3s; }
 #content.active { margin-left: 0; }
 
+#main .svg-div {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 500px; /* aspect ratio */
+    vertical-align: top;
+    overflow: hidden;
+}
 
+#main .svg-div .svg-content {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
 /** NAVBAR STYLES */
-.navbar { color: #fff; height: 60px; background: #2380b6; z-index: 10;; }
+.navbar {
+    color: #fff;
+    height: 60px;
+    background: linear-gradient(135deg,#2196f3 1%,#0969b4 100%);
+    z-index: 10;
+}
 .navbar-toggler a { color: #fff; padding: .6em; border-radius: 25px !important; } .navbar-toggler a:hover { background: rgba(0, 0, 0, .25); }
 .navbar-user { color: #fff; border-radius: 25px; } .navbar-user:hover { background: rgba(0, 0, 0, .25); }
 
