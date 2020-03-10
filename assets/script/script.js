@@ -42,6 +42,8 @@ let margin = { top: 30, right: 20, bottom: 30, left: 50 },
     width, // width gets defined below
     height = 500 - margin.top - margin.bottom;
 
+width = parseInt(d3.select('#main').style('width'), 10) - margin.left - margin.right;
+
 // Set the scales ranges
 var xScale = d3.scaleBand();
 var yScale = d3.scaleLinear().range([height, 0]);
@@ -65,12 +67,9 @@ var artboard = svg.append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 // set the domain range from the data
-var xScale = d3.scaleTime()
-    //.domain(data.map(function (d) { return d.Year }))
-    .domain(d3.extent(data, function (d) {
-        console.log(d.Year)
-        return d.Year;
-    }));
+var xScale = d3.scaleBand()
+    .domain(data.map(function (d) { return d.Year }))
+    .range([0, width]);
 //.range([0, width])
 //.padding(.2);
 yScale.domain([
@@ -88,17 +87,21 @@ var rectGrp = svg.append('g')
     .attr(
         'transform', 'translate(' + margin.left + ',' + margin.top + ')'
     );
-console.log(xScale.scaleTime())
+
 rectGrp.selectAll('rect')
     .data(data)
     .enter()
     .append('rect')
-    .attr('width', xScale.bandwidth())
+    .attr('width', margin.top + xScale.bandwidth())
+    .attr('width', (d) => {
+        console.log(xScale.bandwidth())
+    })
+    //.attr('width', xScale.bandwidth())
     .attr('height', function (d, i) {
         return height - yScale(d.Total);
     })
     .attr('x', function (d, i) {
-        return xScale(d.Year);
+        return margin.left + xScale(d.Year);
     })
     .attr('y', function (d, i) {
         return yScale(d.Total)
