@@ -69,9 +69,9 @@ var artboard = svg.append("g")
 // set the domain range from the data
 var xScale = d3.scaleBand()
     .domain(data.map(function (d) { return d.Year }))
-    .range([0, width]);
+    .range([0, width])
+    .padding(.2);
 //.range([0, width])
-//.padding(.2);
 yScale.domain([
     d3.min(data, function (d) { return Math.floor(d.Total - 200); }),
     d3.max(data, function (d) { return Math.floor(d.Total + 200); })
@@ -84,24 +84,23 @@ var yAxisEl = artboard.append("g")
     .call(yAxis);
 
 var rectGrp = svg.append('g')
-    .attr(
-        'transform', 'translate(' + margin.left + ',' + margin.top + ')'
-    );
+    .attr("viewBox", [0, 0, width, height])
+    .attr("preserveAspectRatio", "none")
+    .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
 rectGrp.selectAll('rect')
     .data(data)
     .enter()
     .append('rect')
-    .attr('width', margin.top + xScale.bandwidth())
-    .attr('width', (d) => {
-        console.log(xScale.bandwidth())
+    .attr('width', (d, i) => {
+        return xScale.bandwidth(d.Year);
     })
     //.attr('width', xScale.bandwidth())
     .attr('height', function (d, i) {
         return height - yScale(d.Total);
     })
     .attr('x', function (d, i) {
-        return margin.left + xScale(d.Year);
+        return xScale(d.Year);
     })
     .attr('y', function (d, i) {
         return yScale(d.Total)
