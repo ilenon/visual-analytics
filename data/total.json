@@ -1,0 +1,58 @@
+[
+    {
+        "product": "Books and Magazines",
+        "total": 3.95
+    },
+    {
+        "product": "Clothing and clothing accessories",
+        "total": 17.68
+    },
+    {
+        "product": "Computer hardware",
+        "total": 5.92
+    },
+    {
+        "product": "Computer software",
+        "total": ""
+    },
+    {
+        "product": "Drugs, health aids, and beauty aids",
+        "total": 7.28
+    },
+    {
+        "product": "Electronics and appliances",
+        "total": 8.84
+    },
+    {
+        "product": "Food, beer, and wine",
+        "total": 2.57
+    },
+    {
+        "product": "Furniture and home furnishings",
+        "total": 9.80
+    },
+    {
+        "product": "Music and videos",
+        "total": ""
+    },
+    {
+        "product": "Office equipment and supplies",
+        "total": 3.13
+    },
+    {
+        "product": "Sporting Goods",
+        "total": 3.96
+    },
+    {
+        "product": "Toys, hobby goods, and games",
+        "total": 3.62
+    },
+    {
+        "product": "Other merchandise",
+        "total": 17.94
+    },
+    {
+        "product": "Nonmerchandise receipts",
+        "total": 8.95
+    }
+]

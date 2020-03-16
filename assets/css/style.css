@@ -33,7 +33,7 @@ a[data-toggle="collapse"] { position: relative; }
     display: inline-block;
     position: relative;
     width: 100%;
-    padding-bottom: 500px; /* aspect ratio */
+    padding-bottom: 400px; /* aspect ratio */
     vertical-align: top;
     overflow: hidden;
 }
@@ -58,6 +58,32 @@ a[data-toggle="collapse"] { position: relative; }
 .card { margin-bottom: 1.5em; box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); }
 
 .info { height: 142px; }
+
+.axis path, .axis line {
+    fill: none;
+    stroke: #fff;
+  }
+.axis text {
+  	font-size: 13px;
+  }
+.bar {
+    fill: #8CD3DD;
+  }
+.bar:hover {
+    fill: #F56C4E;
+  }
+svg text.label {
+  fill:white;
+  font: 15px;  
+  font-weight: 400;
+  text-anchor: middle;
+}
+
+.tick text { 
+    display: flex;
+    word-wrap: break-word;
+}
+
 
 /* ---------------------------------------------------
     MEDIAQUERIES

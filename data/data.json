@@ -1,46 +1,541 @@
     {
         "2015": [
             {
-                "product": "Aliexpress",
-                "total": 1,
-                "atual": 1
+                "product": "Total Electronic Shopping and Mail-Order Houses (NAICS 45411)",
+                "total": 433692,
+                "ecommerce": 294809
             },
             {
-                "product": "Amazon",
-                "total": 2,
-                "atual": 3
+                "product": "Books and Magazines",
+                "total": 12583,
+                "ecommerce": 11648
             },
             {
-                "product": "Apple",
-                "total": 3,
-                "atual": 6
+                "product": "Clothing and clothing accessories",
+                "total": 58188,
+                "ecommerce": 52128
             },
             {
-                "product": "Samsung",
-                "total": 4,
-                "atual": 10
+                "product": "Computer hardware",
+                "total": "",
+                "ecommerce": 17459
+            },
+            {
+                "product": "Computer software",
+                "total": "",
+                "ecommerce": ""
+            },
+            {
+                "product": "Drugs, health aids, and beauty aids",
+                "total": "",
+                "ecommerce": 21469
+            },
+            {
+                "product": "Electronics and appliances",
+                "total": 30016,
+                "ecommerce": 26050
+            },
+            {
+                "product": "Food, beer, and wine",
+                "total": 9841,
+                "ecommerce": 7579
+            },
+            {
+                "product": "Furniture and home furnishings",
+                "total": 32369,
+                "ecommerce": 28883
+            },
+            {
+                "product": "Music and videos",
+                "total": "",
+                "ecommerce": ""
+            },
+            {
+                "product": "Office equipment and supplies",
+                "total": 10613,
+                "ecommerce": 9236
+            },
+            {
+                "product": "Sporting Goods",
+                "total": 13104,
+                "ecommerce": 11681
+            },
+            {
+                "product": "Toys, hobby goods, and games",
+                "total": 12110,
+                "ecommerce": 10682
+            },
+            {
+                "product": "Other merchandise",
+                "total": 68378,
+                "ecommerce": 52893
+            },
+            {
+                "product": "Nonmerchandise receipts",
+                "total": 29153,
+                "ecommerce": 26374
             }
         ],
         "2014": [
             {
-                "product": "Aliexpress",
-                "total": 10,
-                "atual": 10
+                "product": "Total Electronic Shopping and Mail-Order Houses (NAICS 45411)",
+                "total": 386065,
+                "ecommerce": 256269
             },
             {
-                "product": "Amazon",
-                "total": 20,
-                "atual": 30
+                "product": "Books and Magazines",
+                "total": 11879,
+                "ecommerce": 10828
             },
             {
-                "product": "Apple",
-                "total": 30,
-                "atual": 60
+                "product": "Clothing and clothing accessories",
+                "total": 53751,
+                "ecommerce": 46830
             },
             {
-                "product": "Samsung",
-                "total": 40,
-                "atual": 100
+                "product": "Computer hardware",
+                "total": 29527,
+                "ecommerce": 16884
+            },
+            {
+                "product": "Computer software",
+                "total": 9594,
+                "ecommerce": 6491
+            },
+            {
+                "product": "Drugs, health aids, and beauty aids",
+                "total": 93586,
+                "ecommerce": 19112
+            },
+            {
+                "product": "Electronics and appliances",
+                "total": 28158,
+                "ecommerce": 24234
+            },
+            {
+                "product": "Food, beer, and wine",
+                "total": 8636,
+                "ecommerce": 6349
+            },
+            {
+                "product": "Furniture and home furnishings",
+                "total": 26599,
+                "ecommerce": 23311
+            },
+            {
+                "product": "Music and videos",
+                "total": "",
+                "ecommerce": ""
+            },
+            {
+                "product": "Office equipment and supplies",
+                "total": "",
+                "ecommerce": ""
+            },
+            {
+                "product": "Sporting Goods",
+                "total": 10910,
+                "ecommerce": 9347
+            },
+            {
+                "product": "Toys, hobby goods, and games",
+                "total": 10623,
+                "ecommerce": 8997
+            },
+            {
+                "product": "Other merchandise",
+                "total": 55104,
+                "ecommerce": 41543
+            },
+            {
+                "product": "Nonmerchandise receipts",
+                "total": 25500,
+                "ecommerce": 22317
+            }
+        ],
+        "2013": [
+            {
+                "product": "Total Electronic Shopping and Mail-Order Houses (NAICS 45411)",
+                "total": 350487,
+                "ecommerce": 221587
+            },
+            {
+                "product": "Books and Magazines",
+                "total": 11444,
+                "ecommerce": 10249
+            },
+            {
+                "product": "Clothing and clothing accessories",
+                "total": 46681,
+                "ecommerce": 40198
+            },
+            {
+                "product": "Computer hardware",
+                "total": 26981,
+                "ecommerce": 15330
+            },
+            {
+                "product": "Computer software",
+                "total": 8329,
+                "ecommerce": 5425
+            },
+            {
+                "product": "Drugs, health aids, and beauty aids",
+                "total": 91001,
+                "ecommerce": 17456
+            },
+            {
+                "product": "Electronics and appliances",
+                "total": 27541,
+                "ecommerce": 23727
+            },
+            {
+                "product": "Food, beer, and wine",
+                "total": 7783,
+                "ecommerce": 5267
+            },
+            {
+                "product": "Furniture and home furnishings",
+                "total": 22856,
+                "ecommerce": 19588
+            },
+            {
+                "product": "Music and videos",
+                "total": 11263,
+                "ecommerce": 10325
+            },
+            {
+                "product": "Office equipment and supplies",
+                "total": 8042,
+                "ecommerce": ""
+            },
+            {
+                "product": "Sporting Goods",
+                "total": 9914,
+                "ecommerce": 7927
+            },
+            {
+                "product": "Toys, hobby goods, and games",
+                "total": 9125,
+                "ecommerce": ""
+            },
+            {
+                "product": "Other merchandise",
+                "total": 47981,
+                "ecommerce": 34491
+            },
+            {
+                "product": "Nonmerchandise receipts",
+                "total": 21546,
+                "ecommerce": 17721
+            }
+        ],
+        "2012": [
+            {
+                "product": "Total Electronic Shopping and Mail-Order Houses (NAICS 45411)",
+                "total": 328655,
+                "ecommerce": 195477
+            },
+            {
+                "product": "Books and Magazines",
+                "total": 10991,
+                "ecommerce": 9778
+            },
+            {
+                "product": "Clothing and clothing accessories",
+                "total": 40451,
+                "ecommerce": 33614
+            },
+            {
+                "product": "Computer hardware",
+                "total": 25640,
+                "ecommerce": 14240
+            },
+            {
+                "product": "Computer software",
+                "total": 8093,
+                "ecommerce": 5425
+            },
+            {
+                "product": "Drugs, health aids, and beauty aids",
+                "total": 90714,
+                "ecommerce": 14612
+            },
+            {
+                "product": "Electronics and appliances",
+                "total": 26573,
+                "ecommerce": 22580
+            },
+            {
+                "product": "Food, beer, and wine",
+                "total": 7070,
+                "ecommerce": 4934
+            },
+            {
+                "product": "Furniture and home furnishings",
+                "total": 19420,
+                "ecommerce": 15917
+            },
+            {
+                "product": "Music and videos",
+                "total": 9914,
+                "ecommerce": 8964
+            },
+            {
+                "product": "Office equipment and supplies",
+                "total": 8579,
+                "ecommerce": 6869
+            },
+            {
+                "product": "Sporting Goods",
+                "total": 8506,
+                "ecommerce": 6356
+            },
+            {
+                "product": "Toys, hobby goods, and games",
+                "total": 7801,
+                "ecommerce": 6091
+            },
+            {
+                "product": "Other merchandise",
+                "total": 44679,
+                "ecommerce": 30045
+            },
+            {
+                "product": "Nonmerchandise receipts",
+                "total": 20224,
+                "ecommerce": 16052
+            }
+        ],
+        "2011": [
+            {
+                "product": "Total Electronic Shopping and Mail-Order Houses (NAICS 45411)",
+                "total": 294697,
+                "ecommerce": 168919
+            },
+            {
+                "product": "Books and Magazines",
+                "total": 10160,
+                "ecommerce": 8773
+            },
+            {
+                "product": "Clothing and clothing accessories",
+                "total": 35137,
+                "ecommerce": 28196
+            },
+            {
+                "product": "Computer hardware",
+                "total": 24948,
+                "ecommerce": 13973
+            },
+            {
+                "product": "Computer software",
+                "total": 6854,
+                "ecommerce": 4493
+            },
+            {
+                "product": "Drugs, health aids, and beauty aids",
+                "total": 82424,
+                "ecommerce": 11845
+            },
+            {
+                "product": "Electronics and appliances",
+                "total": 24622,
+                "ecommerce": 20975
+            },
+            {
+                "product": "Food, beer, and wine",
+                "total": 5985,
+                "ecommerce": 3984
+            },
+            {
+                "product": "Furniture and home furnishings",
+                "total": 16900,
+                "ecommerce": 13536
+            },
+            {
+                "product": "Music and videos",
+                "total": 8225,
+                "ecommerce": 7241
+            },
+            {
+                "product": "Office equipment and supplies",
+                "total": 8136,
+                "ecommerce": 6432
+            },
+            {
+                "product": "Sporting Goods",
+                "total": 6982,
+                "ecommerce": 5103
+            },
+            {
+                "product": "Toys, hobby goods, and games",
+                "total": 6794,
+                "ecommerce": 5260
+            },
+            {
+                "product": "Other merchandise",
+                "total": 39998,
+                "ecommerce": 25491
+            },
+            {
+                "product": "Nonmerchandise receipts",
+                "total": 17532,
+                "ecommerce": 13617
+            }
+        ],
+        "2010": [
+            {
+                "product": "Total Electronic Shopping and Mail-Order Houses (NAICS 45411)",
+                "total": 263488,
+                "ecommerce": 143000
+            },
+            {
+                "product": "Books and Magazines",
+                "total": 8860,
+                "ecommerce": 7428
+            },
+            {
+                "product": "Clothing and clothing accessories",
+                "total": 31388,
+                "ecommerce": 23480
+            },
+            {
+                "product": "Computer hardware",
+                "total": 22420,
+                "ecommerce": 12080
+            },
+            {
+                "product": "Computer software",
+                "total": 5834,
+                "ecommerce": 3676
+            },
+            {
+                "product": "Drugs, health aids, and beauty aids",
+                "total": 75318,
+                "ecommerce": 10952
+            },
+            {
+                "product": "Electronics and appliances",
+                "total": 21732,
+                "ecommerce": 17861
+            },
+            {
+                "product": "Food, beer, and wine",
+                "total": 5267,
+                "ecommerce": 3372
+            },
+            {
+                "product": "Furniture and home furnishings",
+                "total": 14518,
+                "ecommerce": 11150
+            },
+            {
+                "product": "Music and videos",
+                "total": "",
+                "ecommerce": ""
+            },
+            {
+                "product": "Office equipment and supplies",
+                "total": 7822,
+                "ecommerce": 6009
+            },
+            {
+                "product": "Sporting Goods",
+                "total": 6437,
+                "ecommerce": 4408
+            },
+            {
+                "product": "Toys, hobby goods, and games",
+                "total": 6022,
+                "ecommerce": 4470
+            },
+            {
+                "product": "Other merchandise",
+                "total": 35221,
+                "ecommerce": 20851
+            },
+            {
+                "product": "Nonmerchandise receipts",
+                "total": 15548,
+                "ecommerce": 11222
+            }
+        ],
+        "2009": [
+            {
+                "product": "Total Electronic Shopping and Mail-Order Houses (NAICS 45411)",
+                "total": 235625,
+                "ecommerce": 121173
+            },
+            {
+                "product": "Books and Magazines",
+                "total": 7569,
+                "ecommerce": 6000
+            },
+            {
+                "product": "Clothing and clothing accessories",
+                "total": 27300,
+                "ecommerce": 19725
+            },
+            {
+                "product": "Computer hardware",
+                "total": 20141,
+                "ecommerce": 11223
+            },
+            {
+                "product": "Computer software",
+                "total": 5432,
+                "ecommerce": 3440
+            },
+            {
+                "product": "Drugs, health aids, and beauty aids",
+                "total": 69164,
+                "ecommerce": 8865
+            },
+            {
+                "product": "Electronics and appliances",
+                "total": 18798,
+                "ecommerce": 15087
+            },
+            {
+                "product": "Food, beer, and wine",
+                "total": 4824,
+                "ecommerce": 2966
+            },
+            {
+                "product": "Furniture and home furnishings",
+                "total": 12759,
+                "ecommerce": 9262
+            },
+            {
+                "product": "Music and videos",
+                "total": 6107,
+                "ecommerce": 5064
+            },
+            {
+                "product": "Office equipment and supplies",
+                "total": 7730,
+                "ecommerce": 5975
+            },
+            {
+                "product": "Sporting Goods",
+                "total": 6058,
+                "ecommerce": 3945
+            },
+            {
+                "product": "Toys, hobby goods, and games",
+                "total": 5384,
+                "ecommerce": 3639
+            },
+            {
+                "product": "Other merchandise",
+                "total": 30895,
+                "ecommerce": 16613
+            },
+            {
+                "product": "Nonmerchandise receipts",
+                "total": 13464,
+                "ecommerce": 9369
             }
         ]
     }
