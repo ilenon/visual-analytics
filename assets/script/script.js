@@ -7,18 +7,25 @@ $(document).ready(function () {
 
 }); //document.ready
 
-var json = './data/total.json';
+var percent = './data/percent.json';
+var total = './data/total.json';
+var data = './data/data.json';
 /**
  * Loading data from Json'.
  */
 document.addEventListener("DOMContentLoaded", function (event) {
-    fetch(json)
+    fetch(percent)
         .then((response) => { return response.json(); })
         .then((data) => {
-            //var parsedData = parseData(data);
-            console.log(data)
             drawChart(data);
-            //createTable(parsedData);
+        })
+        .catch((err) => { console.log(err); })
+
+    fetch(data)
+        .then((response) => { return response.json(); })
+        .then((data) => {
+            var parsedData = getTotal(data);
+            createTable(parsedData);
         })
         .catch((err) => { console.log(err); })
 });
@@ -40,120 +47,95 @@ function parseData(data) {
     return arr;
 }
 
+function getTotal(data) {
+    var arr = [];
+    for (var i in data) {
+        arr.push({
+            year: i,
+            total: +data[i][0].total,
+            ecommerce: +data[i][0].ecommerce,
+        });
+    }
+    return arr;
+}
+
 function drawChart(data) {
 
-    var colors = d3.hsl("steelblue");
-
     // Set the dimensions of the canvas / graph
-    let margin = { top: 30, right: 20, bottom: 30, left: 20 },
+    let margin = { top: 30, right: 20, bottom: 30, left: 200 },
         width, // width gets defined below
         height = 400 - margin.top - margin.bottom;
 
     width = parseInt(d3.select('#chartID').style('width'), 10) - margin.left - margin.right;
 
-    // Set the scales ranges
-    var xScale = d3.scaleBand();
-    var yScale = d3.scaleLinear();
-
-    var formatPercent = d3.format("0.1");
-
-    // Define xAxis and yAxis
-    var xAxis = d3.axisBottom().scale(xScale)
-        .tickSize(10)
-        .tickPadding(5);
-
-    // Add svg canvas
-    var svg = d3.select("#chartID")
-        .append("div")
-        .classed("svg-div border", true) //container class to make it responsive
-        .append("svg")
-        .attr("height", height + margin.top + margin.bottom)
-        .classed("svg-content", true);
-
-    var artboard = svg.append("g")
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-
-    // set the domain range from the data
-    xScale.domain(data.map(function (d) { return d.product }))
-        .range([0, width])
+    var xScale = d3.scaleLinear()
+        .domain([0, 100])
+        .range([1, width]);
+    var yScale = d3.scaleBand()
+        .rangeRound([0, height])
+        .domain(data.map((d) => d.product))
         .padding(.2);
-    yScale.domain(d3.extent(data, function (d) {
-        console.log(d.total);
-        return d.total;
-    }))
-        .range([height, 0]);
-    //yScale.domain([0, d3.max(data, (d) => { return d.total })]);
 
-    // Add the X and Y Axis
-    var xAxisEl = artboard.append("g")
-        .attr("transform", "translate(0," + height + ")");
+    var yAxis = d3.axisLeft()
+        .scale(yScale);
 
-    var rectGrp = svg.append('g')
-        .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+    var graph = d3.select('#chartID')
+        .append('svg')
+        .attr('width', width)
+        .attr('height', height)
+        ;
 
-    rectGrp.selectAll('rect')
+    var bar = graph.selectAll('g')
         .data(data)
         .enter()
-        .append('rect')
-        .attr('width', (d) => {
-            return xScale.bandwidth(d.product);
-        })
-        //.attr('width', xScale.bandwidth())
-        .attr('height', function (d, i) {
-            console.log(height - yScale(d.total))
-            return height - yScale(d.total);
-        })
-        .attr('x', function (d) {
-            return xScale(d.product);
-        })
-        .attr('y', function (d, i) {
-            return yScale(d.total)
-        })
-        .attr('fill', function (d, i) {
-            return colors;
+        .append('g')
+        .attr('transform', (d, i) => {
+            return 'translate(' + margin.left + ',' + yScale(d.product) + ')';
         });
 
-    svg.append('text')
-        .attr('x', 20)
-        .attr('y', 20)
-        .text('% of E-commerce total');
+    var gy = graph.append("g")
+        .attr('fill', 'black')
+        .attr('transform', 'translate(170, 10)')
+        .call(yAxis);
 
-    svg.selectAll('rect')
-        .on('mouseenter', function (actual, i) {
-            d3.select(this).attr('opacity', 0.5)
+    var svg = d3.select('svg');
+
+    svg.selectAll('text')
+        .attr('fill', '#000');
+
+    bar.append('rect')
+        .attr('width', (d) => {
+            return xScale(d.total);
         })
-        .on('mouseleave', function (actual, i) {
-            d3.select(this).attr('opacity', 1)
+        .attr('height', yScale.bandwidth())
+        .attr('y', 0)
+        .attr('x', 0);
+
+    bar.append('text')
+        .attr('x', (d) => {
+            return xScale(d.total) - (margin.right / 5);
         })
+        .attr('y', (d) => {
+            return yScale.bandwidth(d.product) / 2;
+        })
+        .attr('dy', '.35em')
+        .text((d) => { return d.total + "%"; });
 
     /**
      * Function to resize svg -----------------------------------------------------------------
      */
     function setChart() {
         // reset the width
-        width = parseInt(d3.select('.svg-div').style('width'), 10) - margin.left - margin.right;
+        width = parseInt(d3.select('#chartID').style('width'), 10) - margin.left - margin.right;
 
         // set the svg dimensions
-        svg.attr("width", width + margin.left + margin.right);
-        rectGrp.attr("width", width + margin.left + margin.right);
-
-        // Set new range for xScale
-        xScale.range([0, width])
-            .padding(.2);
-
-        // give the x axis the resized scale
-        xAxis.scale(xScale);
-
-        // draw the new xAxis
-        xAxisEl.call(xAxis);
-
-        d3.selectAll('rect')
+        graph.attr("width", width + margin.left + margin.right);
+        xScale = d3.scaleLinear()
+            .domain([0, 100])
+            .range([1, width]);
+        bar.selectAll('rect')
             .attr('width', (d) => {
-                return xScale.bandwidth(d.product);
-            })
-            .attr('x', function (d) {
-                return xScale(d.product);
+                return xScale(d.total);
             });
     };
 

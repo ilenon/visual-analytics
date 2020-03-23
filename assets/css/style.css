@@ -29,20 +29,24 @@ a[data-toggle="collapse"] { position: relative; }
 #content { width: 100%; margin-left: 250px; transition: all 0.3s; }
 #content.active { margin-left: 0; }
 
-#main .svg-div {
-    display: inline-block;
+#chartID {
     position: relative;
-    width: 100%;
-    padding-bottom: 400px; /* aspect ratio */
-    vertical-align: top;
-    overflow: hidden;
 }
 
-#main .svg-div .svg-content {
+.svg-div .svg-content {
     display: inline-block;
     position: absolute;
     top: 0;
     left: 0;
+}
+
+svg rect {
+    fill: rgba(33, 150, 243, 1);
+}
+
+svg text {
+    font: 10px sans-serif;
+    text-anchor: end;
 }
 
 /** NAVBAR STYLES */
@@ -59,30 +63,6 @@ a[data-toggle="collapse"] { position: relative; }
 
 .info { height: 142px; }
 
-.axis path, .axis line {
-    fill: none;
-    stroke: #fff;
-  }
-.axis text {
-  	font-size: 13px;
-  }
-.bar {
-    fill: #8CD3DD;
-  }
-.bar:hover {
-    fill: #F56C4E;
-  }
-svg text.label {
-  fill:white;
-  font: 15px;  
-  font-weight: 400;
-  text-anchor: middle;
-}
-
-.tick text { 
-    display: flex;
-    word-wrap: break-word;
-}
 
 
 /* ---------------------------------------------------
