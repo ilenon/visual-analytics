@@ -69,7 +69,7 @@ function drawChart(data) {
     width = parseInt(d3.select('#chartID').style('width'), 10) - margin.left - margin.right;
 
     var xScale = d3.scaleLinear()
-        .domain([0, 100])
+        .domain([0, 18])
         .range([1, width]);
     var yScale = d3.scaleBand()
         .rangeRound([0, height])
@@ -119,7 +119,14 @@ function drawChart(data) {
             return yScale.bandwidth(d.product) / 2;
         })
         .attr('dy', '.35em')
-        .text((d) => { return d.total + "%"; });
+        .text((d) => {
+            if (!d.total) {
+                return d.total;
+            } else {
+                return d.total + "%";
+            }
+
+        });
 
     /**
      * Function to resize svg -----------------------------------------------------------------
@@ -131,12 +138,16 @@ function drawChart(data) {
         // set the svg dimensions
         graph.attr("width", width + margin.left + margin.right);
         xScale = d3.scaleLinear()
-            .domain([0, 100])
+            .domain([0, 18])
             .range([1, width]);
         bar.selectAll('rect')
             .attr('width', (d) => {
                 return xScale(d.total);
             });
+        bar.selectAll('text')
+            .attr('x', (d) => {
+                return xScale(d.total) - (margin.right / 5);
+            })
     };
 
     setChart();

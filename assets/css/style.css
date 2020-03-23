@@ -31,6 +31,7 @@ a[data-toggle="collapse"] { position: relative; }
 
 #chartID {
     position: relative;
+    background: rgba(33, 150, 243, .05);
 }
 
 .svg-div .svg-content {
